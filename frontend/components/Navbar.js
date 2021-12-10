@@ -1,13 +1,17 @@
 import Image from "next/image";
+import Link from "next/link"
+
 
 const Navbar = () => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand" href="/">
+          <Link href="/">
+          <a className="navbar-brand" >
             Logo...
           </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,42 +26,55 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+              <Link href="/">
+                <a className="nav-link active" aria-current="page" >
                   Home
                 </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="about">
+                <Link href="about">
+                <a className="nav-link" >
                   About Us
                 </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
+                <Link href="blog">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="blog"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Blog
+                  News
                 </a>
+                </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Action
+                  <Link href="blog">
+                    <a className="dropdown-item" >
+                    Blog
                     </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
+                    <Link href="/blog/post">
+                    
+                    <a className="dropdown-item" >
+                      Post action
                     </a>
+                    </Link>
+                    
                   </li>
 
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link href="#">
+                    <a className="dropdown-item">
                       Something else here
                     </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
